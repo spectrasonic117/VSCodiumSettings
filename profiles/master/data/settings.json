@@ -1,6 +1,375 @@
+// ██╗   ██╗███████╗ ██████╗ ██████╗ ██████╗ ███████╗
+// ██║   ██║██╔════╝██╔════╝██╔═══██╗██╔══██╗██╔════╝
+// ██║   ██║███████╗██║     ██║   ██║██║  ██║█████╗
+// ╚██╗ ██╔╝╚════██║██║     ██║   ██║██║  ██║██╔══╝
+//  ╚████╔╝ ███████║╚██████╗╚██████╔╝██████╔╝███████╗
+//   ╚═══╝  ╚══════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
 {
+    //? === General Settings ===
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": true,
+    "editor.fastScrollSensitivity": 1,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "CommitMono, FiraCode Nerd Font",
+    "editor.fontVariations": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.insertSpaces": true,
+    "editor.letterSpacing": 0,
+    "editor.lineHeight": 1.5,
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.overviewRulerBorder": false,
+    "editor.scrollbar.vertical": "auto",
+    "editor.suggestSelection": "first",
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 100,
+    //? === Bracket Pair Colorized ===
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.hover.enabled": "on",
+    "editor.stickyScroll.enabled": true,
+    "editor.colorDecoratorsActivatedOn": "click",
+    "editor.minimap.renderCharacters": false,
+    "editor.suggest.showCustomcolors": false,
+    "editor.tabCompletion": "on",
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.codeActionsOnSave": {
+        "quickfix.biome": "never"
+    },
+    "editor.accessibilitySupport": "off",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "keyword",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "invalid",
+                    "keyword.operator",
+                    "constant.numeric.css",
+                    "keyword.other.unit.px.css",
+                    "constant.numeric.decimal.js",
+                    "constant.numeric.json"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "diffEditor.wordWrap": "on",
+    "window.nativeTabs": false,
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.tabs.enableAnimation": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.integrated.gpuAcceleration": "off",
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "terminal.external.osxExec": "Ghostty.app",
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
+        },
+        "Gemini": {
+            "path": "zsh",
+            "overrideName": true,
+            "color": "terminal.ansiCyan",
+            "args": [
+                "-l",
+                "/Users/spectra/binaries/gemini.sh"
+            ],
+            "icon": "sparkle-filled"
+        },
+        "Qwen Coder": {
+            "path": "zsh",
+            "overrideName": true,
+            "color": "terminal.ansiMagenta",
+            "args": [
+                "-l",
+                "/Users/spectra/binaries/qwen.sh"
+            ],
+            "icon": "sparkle-filled"
+        },
+        "Crush": {
+            "path": "zsh",
+            "overrideName": true,
+            "color": "terminal.ansiGreen",
+            "args": [
+                "-l",
+                "/Users/spectra/binaries/crush.sh"
+            ],
+            "icon": "sparkle-filled"
+        }
+    },
+    //? === Prettier ===
+    "prettier.useTabs": true,
+    "prettier.tabWidth": 4,
+    "prettier.semi": true,
+    "prettier.enable": true,
+    "prettier.bracketSameLine": true,
+    "prettier.endOfLine": "auto",
+    "prettier.documentSelectors": [
+        "**/*.astro"
+    ],
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleAttributePerLine": false,
+    //? === Git Configuration ===
+    "git.autofetch": true,
+    "git.terminalGitEditor": true,
+    "git.confirmSync": false,
+    //? === Advanced New File Configuration ===
+    "advancedNewFile.exclude": {
+        "node_modules": true,
+        "node_modules_electron": true,
+        "dev": true,
+        "dist": true
+    },
+    "advancedNewFile.convenienceOptions": [
+        "last",
+        "current",
+        "root"
+    ],
+    //? === File Associations - Excludes ===
+    "files.associatiotns": {
+        "*.rasi": "css",
+        "*.css": [
+            "tailwindcss",
+            "postcss"
+        ],
+        "*.ino": "cpp"
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    // // Indent Rainbow
+    // // For which languages indent-rainbow should be activated (if empty it means all).
+    // "indentRainbow.includedLanguages": [], // for example ["nim", "nims", "python"]
+    // // For which languages indent-rainbow should be deactivated (if empty it means none).
+    // "indentRainbow.excludedLanguages": ["plaintext"],
+    // // The delay in ms until the editor gets updated.
+    // "indentRainbow.updateDelay": 1000, // 10 makes it super fast but may cost more resources
+    // "indentRainbow.colors": [
+    // 	"rgba(255,255,64,0.07)",
+    // 	"rgba(127,255,127,0.07)",
+    // 	"rgba(255,127,255,0.07)",
+    // 	"rgba(79,236,236,0.07)"
+    // ],
+    // // "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+    // "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)",
+    // "indentRainbow.colorOnWhiteSpaceOnly": true,
+    //? === Code Languages Settings ===
+    "[astro]": {
+        // "editor.defaultFormatter": "astro-build.astro-vscode"
+        // "editor.defaultFormatter": "esbenp.prettier-vscode"
+        // "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "[java]": {
+        // "editor.defaultFormatter": "redhat.java",
+        "editor.pasteAs.enabled": false,
+        "editor.tabSize": 4
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[mcfunction]": {
+        "editor.semanticHighlighting.enabled": true
+    },
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordBasedSuggestions": "off"
+    },
+    "[svelte]": {
+        // "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "[vue]": {
+        // "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.autoIndent": "keep",
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never",
+        "editor.quickSuggestions": {
+            "strings": true,
+            "other": true,
+            "comments": false
+        }
+    },
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    //? === HTML & CSS Documentation ===
+    "html.hover.documentation": false,
+    "html.hover.references": false,
+    "css.hover.documentation": false,
+    "css.hover.references": false,
+    "less.hover.documentation": false,
+    "less.hover.references": false,
+    "scss.hover.documentation": false,
+    "scss.hover.references": false,
+    //? === Emmet ===
+    "emmet.includeLanguages": {
+        "javascript": "html",
+        "astro": "html",
+        "pug": "jade"
+    },
+    //? === eslint ===
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "astro",
+        "typescript",
+        "typescriptreact"
+    ],
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "security.workspace.trust.untrustedFiles": "open",
+    // "html.format.wrapAttributes": "force-aligned",
+    // "html.format.templating": true,
+    // "window.menuBarVisibility": "toggle",
+    "symbols.hidesExplorerArrows": true,
+    "accessibility.verbosity.hover": false,
+    "eslint.enable": true,
+    "java.inlayHints.parameterNames.enabled": "none",
+    "files.associations": {
+        ".prettierrc": "yaml"
+    },
+    "markdown.preview.typographer": true,
+    "svelte.enable-ts-plugin": true,
+    "workbench.tree.enableStickyScroll": true,
+    "errorLens.lintFilePaths": {
+        "eslint": [
+            "**/*.eslintrc.{js,cjs,yaml,yml,json}",
+            "**/*package.json"
+        ],
+        "Stylelint": [
+            "**/*.stylelintrc",
+            "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
+            "**/*stylelint.config.{cjs,js}",
+            "**/*package.json"
+        ]
+    },
+    "vscord.app.name": "Visual Studio Code",
+    "vscord.status.details.text.editing": "Project: {workspace}",
+    "vscord.status.details.text.notInFile": "No File",
+    "vscord.status.details.text.noWorkSpaceText": "No Workspace",
+    "vscord.status.details.text.idle": "Idle",
+    "vscord.status.state.text.editing": "File: {file_name}{file_extension}",
+    "tailwind-fold.autoFold": false,
+    "vscord.status.idle.check": false,
+    "vscord.status.idle.enabled": false,
+    "git.enableSmartCommit": true,
+    "workbench.editor.enablePreview": false,
+    "redhat.telemetry.enabled": false,
+    "diffEditor.codeLens": true,
+    "gitlens.ai.model": "mistral:codestral-latest",
+    "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+    "commitSage.provider.type": "codestral",
+    "commitSage.commit.commitFormat": "emoji",
+    "git.openRepositoryInParentFolders": "always",
+    "update.showReleaseNotes": false,
+    "yaml.schemas": {
+        "file:///Users/spectra/.vscode/extensions/continue.continue-1.2.2-darwin-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    },
+    // Kilocode Settings
+    "kilo-code.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show",
+        "npm test",
+        "npm install",
+        "tsc",
+        "mkdir",
+        "javap",
+        "grep",
+        "jar tf",
+        "jar",
+        "head",
+        "wc",
+        "cat",
+        "sed",
+        "gradle",
+        "./gradlew",
+        "cd",
+        "./gradlew build",
+        "ls",
+        "find",
+        "javac",
+        "./gradlew compileJava"
+    ],
+    "kilo-code.deniedCommands": [
+        "rm -rf .git",
+        "rm -rf"
+    ],
+    "kilo-code.debug": false,
     "workbench.secondarySideBar.showLabels": false,
-    "workbench.colorTheme": "Material Monokai High Contrast",
     "workbench.productIconTheme": "material-product-icons",
-    "workbench.iconTheme": "material-icon-theme"
+    "settingsSync.ignoredExtensions": [],
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Material Monokai High Contrast",
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.openPositioning": "last",
+    "window.zoomPerWindow": true,
+    "ia-vscode.neverWarnAboutCopilot": true,
+    "chat.useAgentSkills": false,
 }

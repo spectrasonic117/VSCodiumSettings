@@ -1,0 +1,184 @@
+[
+    {
+        "key": "ctrl+[Backslash]",
+        "command": "editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+cmd+[BracketRight]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+[Quote]",
+        "command": "editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+cmd+[BracketLeft]",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+c",
+        "command": "editor.toggleFold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+l",
+        "command": "-editor.toggleFold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "shift+alt+c",
+        "command": "editor.unfoldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+j",
+        "command": "-editor.unfoldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "ctrl+cmd+s",
+        "command": "editor.action.insertSnippet"
+    },
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "alt+cmd+n",
+        "command": "-extension.advancedNewFile"
+    },
+    {
+        "key": "ctrl+cmd+o",
+        "command": "workbench.action.files.openFolder"
+    },
+    {
+        "key": "alt+k d",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "alt+shift+j",
+        "command": "editor.action.copyLinesDownAction"
+    },
+    {
+        "key": "alt+shift+k",
+        "command": "editor.action.copyLinesUpAction"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.moveLinesUpAction"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.moveLinesDownAction"
+    },
+    {
+        "key": "ctrl+alt+cmd+[BracketRight]",
+        "command": "workbench.action.terminal.split"
+    },
+    {
+        "key": "alt+k k",
+        "command": "workbench.action.terminal.killActiveTab"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "workbench.action.newWindowTab"
+    },
+    {
+        "key": "shift+alt+cmd+n",
+        "command": "workbench.action.newWindow"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "-workbench.action.newWindow"
+    },
+    {
+        "key": "cmd+shift+i",
+        "command": "extension.wrapTag",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+k cmd+i",
+        "command": "workbench.action.selectIconTheme"
+    },
+    {
+        "key": "cmd+k cmd+p",
+        "command": "workbench.action.selectProductIconTheme"
+    },
+    {
+        "key": "cmd+k q",
+        "command": "workbench.action.closeFolder",
+        "when": "emptyWorkspaceSupport && workbenchState != 'empty'"
+    },
+    {
+        "key": "cmd+k f",
+        "command": "workbench.action.closeFolder",
+        "when": "emptyWorkspaceSupport && workbenchState != 'empty'"
+    },
+    {
+        "key": "cmd+[Backquote]",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "continue.focusContinueInputWithoutClear"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-continue.focusContinueInputWithoutClear"
+    },
+    {
+        "key": "alt+cmd+n",
+        "command": "continue.rejectVerticalDiffBlock",
+        "when": "continue.continueGUIView.active"
+    },
+    {
+        "key": "alt+cmd+n",
+        "command": "-continue.rejectVerticalDiffBlock"
+    },
+    {
+        "key": "cmd+k cmd+j",
+        "command": "workbench.profiles.actions.switchProfile"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\\\r\n"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+y",
+        "command": "-chatEditor.action.acceptHunk",
+        "when": "chatEdits.cursorInChangeRange && chatEdits.hasEditorModifications && editorFocus && !chatEdits.isCurrentlyBeingModified || chatEdits.cursorInChangeRange && chatEdits.hasEditorModifications && notebookCellListFocused && !chatEdits.isCurrentlyBeingModified"
+    },
+    {
+        "key": "cmd+y",
+        "command": "kilo-code.addToContext",
+        "when": "editorHasSelection && editorTextFocus"
+    },
+    {
+        "key": "cmd+k cmd+a",
+        "command": "-kilo-code.addToContext",
+        "when": "editorHasSelection && editorTextFocus"
+    }
+]

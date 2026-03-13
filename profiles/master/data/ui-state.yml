@@ -5,6 +5,7 @@ kilocode.kilo-code: '{"defaultCommandsMigrationCompleted":true,"allowedCommands"
   "},"mxbai-embed-large":{"dimension":1024,"scoreThreshold":0.4},"all-minilm":{"dimension":384,"scoreThreshold":0.4}},"openai-compatible":{"text-embedding-3-small":{"dimension":1536,"scoreThreshold":0.4},"text-embedding-3-large":{"dimension":3072,"scoreThreshold":0.4},"text-embedding-ada-002":{"dimension":1536,"scoreThreshold":0.4},"nomic-embed-code":{"dimension":3584,"scoreThreshold":0.15,"queryPrefix":"Represent
   this query for searching relevant code:
   "}},"gemini":{"text-embedding-004":{"dimension":768},"gemini-embedding-001":{"dimension":3072,"scoreThreshold":0.4}},"mistral":{"codestral-embed-2505":{"dimension":1536,"scoreThreshold":0.4}},"vercel-ai-gateway":{"openai/text-embedding-3-small":{"dimension":1536,"scoreThreshold":0.4},"openai/text-embedding-3-large":{"dimension":3072,"scoreThreshold":0.4},"openai/text-embedding-ada-002":{"dimension":1536,"scoreThreshold":0.4},"cohere/embed-v4.0":{"dimension":1024,"scoreThreshold":0.4},"google/gemini-embedding-001":{"dimension":3072,"scoreThreshold":0.4},"google/text-embedding-005":{"dimension":768,"scoreThreshold":0.4},"google/text-multilingual-embedding-002":{"dimension":768,"scoreThreshold":0.4},"amazon/titan-embed-text-v2":{"dimension":1024,"scoreThreshold":0.4},"mistral/codestral-embed":{"dimension":1536,"scoreThreshold":0.4},"mistral/mistral-embed":{"dimension":1024,"scoreThreshold":0.4}},"bedrock":{"amazon.titan-embed-text-v1":{"dimension":1536,"scoreThreshold":0.4},"amazon.titan-embed-text-v2:0":{"dimension":1024,"scoreThreshold":0.4},"amazon.titan-embed-image-v1":{"dimension":1024,"scoreThreshold":0.4},"amazon.nova-2-multimodal-embeddings-v1:0":{"dimension":1024,"scoreThreshold":0.4},"cohere.embed-english-v3":{"dimension":1024,"scoreThreshold":0.4},"cohere.embed-multilingual-v3":{"dimension":1024,"scoreThreshold":0.4}},"openrouter":{"openai/text-embedding-3-small":{"dimension":1536,"scoreThreshold":0.4},"openai/text-embedding-3-large":{"dimension":3072,"scoreThreshold":0.4},"openai/text-embedding-ada-002":{"dimension":1536,"scoreThreshold":0.4},"google/gemini-embedding-001":{"dimension":3072,"scoreThreshold":0.4},"mistralai/mistral-embed-2312":{"dimension":1024,"scoreThreshold":0.4},"mistralai/codestral-embed-2505":{"dimension":1536,"scoreThreshold":0.4},"qwen/qwen3-embedding-0.6b":{"dimension":1024,"scoreThreshold":0.4},"qwen/qwen3-embedding-4b":{"dimension":2560,"scoreThreshold":0.4},"qwen/qwen3-embedding-8b":{"dimension":4096,"scoreThreshold":0.4}},"voyage":{"voyage-code-3":{"dimension":1024,"scoreThreshold":0.4},"voyage-4-large":{"dimension":1024,"scoreThreshold":0.4},"voyage-4":{"dimension":1024,"scoreThreshold":0.4},"voyage-4-lite":{"dimension":1024,"scoreThreshold":0.4},"voyage-finance-2":{"dimension":1024,"scoreThreshold":0.4},"voyage-law-2":{"dimension":1024,"scoreThreshold":0.4}}},"mcpHubInstanceId":"1773368806055","customModes":[],"ghostServiceSettings":{"enableAutoTrigger":true,"enableSmartInlineTaskKeybinding":true,"enableChatAutocomplete":true,"hasKilocodeProfileWithNoBalance":false},"firstInstallCompleted":true,"globalWorkflowToggles":{},"listApiConfigMeta":[{"name":"default","id":"3188xl90ypd","apiProvider":"kilocode","modelId":"minimax-m2.1:free"}]}'
+mhutchie.git-graph: '{"lastKnownGitPath":"/usr/local/bin/git"}'
 workbench.activity.pinnedViewlets2: '[{"id":"workbench.view.explorer","pinned":true,"visible":false,"order":0},{"id":"workbench.view.search","pinned":true,"visible":false,"order":1},{"id":"workbench.view.scm","pinned":true,"visible":false,"order":2},{"id":"workbench.view.debug","pinned":true,"visible":false,"order":3},{"id":"workbench.view.remote","pinned":true,"visible":false,"order":4},{"id":"workbench.view.extensions","pinned":true,"visible":false,"order":4},{"id":"workbench.view.extension.test","pinned":true,"visible":false,"order":6},{"id":"workbench.view.extension.references-view","pinned":true,"visible":false,"order":7},{"id":"workbench.view.extension.gradleContainerView","pinned":true,"visible":false,"order":10}]'
 workbench.activity.placeholderViewlets: "[{\"id\":\"workbench.view.explorer\",\
   \"themeIcon\":{\"id\":\"explorer-view-icon\"},\"name\":\"Explorador\",\"isBui\
@@ -36,9 +37,61 @@ workbench.activity.placeholderViewlets: "[{\"id\":\"workbench.view.explorer\",\
   xplorador
   remoto\",\"isBuiltin\":true,\"views\":[]},{\"id\":\"workbench.view.extensions\
   \",\"themeIcon\":{\"id\":\"extensions-view-icon\"},\"name\":\"Extensiones\",\
-  \"isBuiltin\":true,\"views\":[]},{\"id\":\"workbench.view.extension.test\",\"\
-  themeIcon\":{\"id\":\"test-view-icon\"},\"name\":\"Pruebas\",\"isBuiltin\":tr\
-  ue,\"views\":[{\"when\":\"testing.providerCount >
+  \"isBuiltin\":true,\"views\":[{\"when\":\"defaultExtensionViews &&
+  extensionsGalleryStatus == 'accessDenied' || defaultExtensionViews &&
+  extensionsGalleryStatus == 'requiresSignIn' || searchMarketplaceExtensions &&
+  extensionsGalleryStatus == 'accessDenied' || searchMarketplaceExtensions &&
+  extensionsGalleryStatus ==
+  'requiresSignIn'\"},{\"when\":\"defaultExtensionViews\"},{\"when\":\"searchEx\
+  tensionUpdates ||
+  searchOutdatedExtensions\"},{\"when\":\"recommendedExtensions &&
+  workbenchState != 'empty'\"},{\"when\":\"defaultExtensionViews && hasGallery
+  && !hasInstalledExtensions\"},{\"when\":\"searchExtensionUpdates ||
+  searchRecentlyUpdatedExtensions\"},{\"when\":\"recommendedExtensions\"},{\"wh\
+  en\":\"defaultExtensionViews && hasGallery &&
+  !config.extensions.showRecommendationsOnlyOnDemand &&
+  !sortByUpdateDate\"},{\"when\":\"defaultExtensionViews &&
+  hasInstalledExtensions\"},{\"when\":\"defaultExtensionViews &&
+  hasInstalledMcpServers &&
+  !chatSetupHidden\"},{\"when\":\"config.chat.mcp.gallery.enabled &&
+  defaultExtensionViews && !chatSetupHidden && !config.chat.disableAIFeatures &&
+  !hasInstalledMcpServers && mcpServersGalleryStatus == 'available' ||
+  config.chat.mcp.gallery.serviceUrl && defaultExtensionViews &&
+  !chatSetupHidden && !config.chat.disableAIFeatures && !hasInstalledMcpServers
+  && mcpServersGalleryStatus == 'available' || defaultExtensionViews &&
+  !chatSetupHidden && !config.chat.disableAIFeatures && !hasInstalledMcpServers
+  && mcpServersGalleryStatus == 'available' && productQualityType !=
+  'stable'\"},{\"when\":\"defaultExtensionViews && !chatSetupHidden &&
+  !config.chat.disableAIFeatures && !config.chat.mcp.gallery.enabled &&
+  !config.chat.mcp.gallery.serviceUrl && !hasInstalledMcpServers &&
+  mcpServersGalleryStatus == 'available' && productQualityType ==
+  'stable'\"},{\"when\":\"defaultExtensionViews &&
+  hasInstalledExtensions\"},{\"when\":\"defaultExtensionViews &&
+  hasInstalledAgentPlugins &&
+  !chatSetupHidden\"},{\"when\":\"defaultExtensionViews && !chatSetupHidden &&
+  !hasInstalledAgentPlugins\"},{\"when\":\"hasGallery &&
+  searchMarketplaceExtensions\"},{\"when\":\"installedExtensions ||
+  searchInstalledExtensions\"},{\"when\":\"searchEnabledExtensions\"},{\"when\":\
+  \"searchDisabledExtensions\"},{\"when\":\"searchBuiltInExtensions\"},{\"when\
+  \":\"searchWorkspaceUnsupportedExtensions\"},{\"when\":\"builtInExtensions\"}\
+  ,{\"when\":\"builtInExtensions\"},{\"when\":\"builtInExtensions\"},{\"when\":\
+  \"searchUnsupportedWorkspaceExtensions\"},{\"when\":\"searchUnsupportedWorksp\
+  aceExtensions\"},{\"when\":\"searchUnsupportedWorkspaceExtensions &&
+  virtualWorkspace\"},{\"when\":\"searchUnsupportedWorkspaceExtensions &&
+  virtualWorkspace\"},{\"when\":\"searchDeprecatedExtensions\"},{\"when\":\"sea\
+  rchRestartRequiredExtensions\"},{\"when\":\"searchAgentPlugins &&
+  !chatSetupHidden\"},{\"when\":\"config.chat.mcp.gallery.enabled &&
+  searchMcpServers && !chatSetupHidden && mcpServersGalleryStatus == 'available'
+  || config.chat.mcp.gallery.serviceUrl && searchMcpServers && !chatSetupHidden
+  && mcpServersGalleryStatus == 'available' || searchMcpServers &&
+  !chatSetupHidden && mcpServersGalleryStatus == 'available' &&
+  productQualityType != 'stable'\"},{\"when\":\"searchMcpServers &&
+  !chatSetupHidden && !config.chat.mcp.gallery.enabled &&
+  !config.chat.mcp.gallery.serviceUrl && mcpServersGalleryStatus == 'available'
+  && productQualityType ==
+  'stable'\"}]},{\"id\":\"workbench.view.extension.test\",\"themeIcon\":{\"id\":\
+  \"test-view-icon\"},\"name\":\"Pruebas\",\"isBuiltin\":true,\"views\":[{\"when\
+  \":\"testing.providerCount >
   0\"},{\"when\":\"testing.isTestCoverageOpen\"}]},{\"id\":\"workbench.view.ext\
   ension.references-view\",\"themeIcon\":{\"id\":\"references\"},\"name\":\"Ref\
   erencias\",\"isBuiltin\":false,\"views\":[{\"when\":\"reference-list.isActive\
@@ -58,7 +111,7 @@ workbench.auxiliarybar.placeholderPanels: '[{"id":"workbench.panel.chat","themeI
   !config.chat.disableAIFeatures"}]},{"id":"workbench.view.extension.kilo-code-ActivityBar","iconUrl":{"$mid":1,"path":"%%EXTENSION_DATA_PATH%%/kilocode.kilo-code-5.10.2-universal/assets/icons/kilo.png","scheme":"file"},"name":"Kilo
   Code","isBuiltin":false,"views":[{}]},{"id":"workbench.view.extension.openchamber","iconUrl":{"$mid":1,"path":"%%EXTENSION_DATA_PATH%%/fedaykindev.openchamber-1.8.6-universal/assets/icon.svg","scheme":"file"},"name":"OpenChamber","isBuiltin":false,"views":[{}]}]'
 workbench.auxiliaryBar.size: "289"
-workbench.editor.languageDetectionOpenedLanguages.global: '[["yaml",true],["json",true],["plaintext",true]]'
+workbench.editor.languageDetectionOpenedLanguages.global: '[["yaml",true],["json",true],["plaintext",true],["jsonc",true]]'
 workbench.explorer.views.state.hidden: '[{"id":"outline","isHidden":false},{"id":"timeline","isHidden":false},{"id":"workbench.explorer.openEditorsView","isHidden":true},{"id":"workbench.explorer.emptyView","isHidden":false},{"id":"npm","isHidden":true},{"id":"mavenProjects","isHidden":false}]'
 workbench.panel.alignment: center
 workbench.panel.chat.hidden: '[{"id":"workbench.panel.chat.view.copilot","isHidden":false}]'

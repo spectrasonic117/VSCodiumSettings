@@ -6,6 +6,8 @@ enabled:
     uuid: 849d53b8-0eb4-4e6b-b73f-870eefcbbf1b
   - id: LoneDev.ia-vscode
     uuid: 6d1423a4-a6dd-4d64-8ddb-f1985de402d0
+  - id: mhutchie.git-graph
+    uuid: 438221f8-1107-4ccd-a6fe-f3b7fe0856b7
   - id: MS-CEINTL.vscode-language-pack-es
     uuid: 47e020a1-33db-4cc0-a1b4-42f97781749a
   - id: omthemes.omthemes
@@ -22,6 +24,8 @@ enabled:
     uuid: d025d869-2cc1-4ecd-9f08-8e9d21a31d93
   - id: sst-dev.opencode
     uuid: 90e5fe3f-5625-4338-82e4-0ca57e7d0af9
+  - id: VizzleTF.geminicommit
+    uuid: 56c7e8ae-db1a-4088-af51-19d0e65df459
   - id: vscjava.vscode-gradle
     uuid: a226f06e-9b5e-493b-b92a-553d3572f969
   - id: vscjava.vscode-maven
