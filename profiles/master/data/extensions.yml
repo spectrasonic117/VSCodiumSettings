@@ -1,6 +1,30 @@
 disabled: []
 enabled:
+  - id: fedaykindev.openchamber
+    uuid: 7bfb7c76-b4a7-41c7-a6ab-5be003c90763
+  - id: kilocode.kilo-code
+    uuid: 849d53b8-0eb4-4e6b-b73f-870eefcbbf1b
+  - id: LoneDev.ia-vscode
+    uuid: 6d1423a4-a6dd-4d64-8ddb-f1985de402d0
   - id: MS-CEINTL.vscode-language-pack-es
     uuid: 47e020a1-33db-4cc0-a1b4-42f97781749a
+  - id: omthemes.omthemes
+    uuid: c471cc0c-80b0-4751-ba3f-2b15152444e3
+  - id: PKief.material-icon-theme
+    uuid: 5db78037-f674-459f-a236-db622c427c5b
+  - id: PKief.material-product-icons
+    uuid: f797dacd-4e80-4f33-8b63-d665c0956013
+  - id: redhat.java
+    uuid: 198a707e-28af-4e84-8610-6e2f628dd12d
+  - id: redhat.vscode-yaml
+    uuid: 2061917f-f76a-458a-8da9-f162de22b97e
+  - id: repeale.material-monokai
+    uuid: d025d869-2cc1-4ecd-9f08-8e9d21a31d93
+  - id: sst-dev.opencode
+    uuid: 90e5fe3f-5625-4338-82e4-0ca57e7d0af9
+  - id: vscjava.vscode-gradle
+    uuid: a226f06e-9b5e-493b-b92a-553d3572f969
+  - id: vscjava.vscode-maven
+    uuid: b0f06c6b-24fb-4d7b-bd79-bc5e2fa17312
   - id: zokugun.cron-tasks
     uuid: b7bbbbd5-7a39-4312-87aa-ef6a41de67fb
