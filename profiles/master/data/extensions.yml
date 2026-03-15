@@ -12,6 +12,8 @@ enabled:
     uuid: 47e020a1-33db-4cc0-a1b4-42f97781749a
   - id: omthemes.omthemes
     uuid: c471cc0c-80b0-4751-ba3f-2b15152444e3
+  - id: penple.skript-vscode
+    uuid: 7d4b7b0e-dc69-48e7-9208-73feb291f039
   - id: PKief.material-icon-theme
     uuid: 5db78037-f674-459f-a236-db622c427c5b
   - id: PKief.material-product-icons
